@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Line, Circle } from 'rc-progress';
 import logo from './logo.svg';
 import './index.css';
 
@@ -9,7 +10,7 @@ class App extends Component {
 
         <div className="row">
           <header className="head container">
-            <ul>
+            <ul className="navbar">
               <li>Hello</li>
               <li>Resume</li>
               <li>Portfolio</li>
@@ -17,12 +18,15 @@ class App extends Component {
           </header>
         </div>
 
+      <div className="alt-row">
         <section className="basic-info bar container">
           <h2>Chris Harris</h2>
           <p>Fullstack Developer</p>
           <img src="asdf" className="selfie" alt="A pic of me"/>
         </section>
+      </div>
 
+      <div className="bio-row">
         <section className="bio bar container">
           <p>
             Lorem ipsum dolor sit amet, sed ne mundi dicam mandamus. Vel an regione salutatus, 
@@ -31,7 +35,9 @@ class App extends Component {
             Saperet persequeris pro te. In eam liber audire, ut natum salutandi consulatu nam.
           </p>
         </section>
+      </div>
 
+      <div className="content">
         <div className="grid">
           <section className="col-1-3">
             <h5>Personal</h5>
@@ -67,31 +73,51 @@ class App extends Component {
                 <tr>
                   <td>HTML5</td>
                   <td>
-                    <div className="w3-blue"/>{/* IMPORT W3'S STYLESHEET FOR PROGRESS BAR*/}
+                    <Line className="line"
+                      percent="80" 
+                      strokeWidth="3"
+                      trailWidth="3"
+                      strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
                 <tr>
                   <td>CSS</td>
                   <td>
-                    <div className="w3-blue"/>{/* IMPORT W3'S STYLESHEET FOR PROGRESS BAR*/}
+                    <Line className="line"
+                      percent="75" 
+                      strokeWidth="3"
+                      trailWidth="3"
+                      strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
                 <tr>
                   <td>JavaScript</td>
                   <td>
-                    <div className="w3-blue"/>{/* IMPORT W3'S STYLESHEET FOR PROGRESS BAR*/}
+                    <Line className="line"
+                      percent="70" 
+                      strokeWidth="3"
+                      trailWidth="3"
+                      strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
                 <tr>
                   <td>Python</td>
                   <td>
-                    <div className="w3-blue"/>{/* IMPORT W3'S STYLESHEET FOR PROGRESS BAR*/}
+                    <Line className="line"
+                      percent="90" 
+                      strokeWidth="3"
+                      trailWidth="3"
+                      strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
                 <tr>
                   <td>SQL</td>
                   <td>
-                    <div className="w3-blue"/>{/* IMPORT W3'S STYLESHEET FOR PROGRESS BAR*/}
+                    <Line className="line" 
+                      percent="60" 
+                      strokeWidth="3"
+                      trailWidth="3"
+                      strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
               </table>
@@ -108,82 +134,129 @@ class App extends Component {
         </section>{/*
 
         */}<section className="col-2-3">
-          <h5>Work</h5>
-            <table>
-              <tr>
-                <td>
-                  <p>IT Technician @ The Institute for Family Health</p>
-                  <p>
-                    Ei inermis graecis phaedrum mea. 
-                    Saperet persequeris pro te. In eam liber audire, ut natum salutandi 
-                    consulatu nam.
-                  </p>
-                </td>
-                <td>2018</td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Software Engineering Internship @ Citymaps</p>
-                  <p>
-                    Ei inermis graecis phaedrum mea. 
-                    Saperet persequeris pro te. In eam liber audire, ut natum salutandi 
-                    consulatu nam.
-                  </p>
-                </td>
-                <td>2016</td>
-              </tr>
-            </table>
+          <div className="col-2-content">
+            <h5>Work</h5>
+              <table>
+                <tr>
+                  <td>
+                    <p>IT Technician @ The Institute for Family Health</p>
+                    <p>
+                      Ei inermis graecis phaedrum mea. 
+                      Saperet persequeris pro te. In eam liber audire, ut natum salutandi 
+                      consulatu nam.
+                    </p>
+                  </td>
+                  <td>2018</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Software Engineering Internship @ Citymaps</p>
+                    <p>
+                      Ei inermis graecis phaedrum mea. 
+                      Saperet persequeris pro te. In eam liber audire, ut natum salutandi 
+                      consulatu nam.
+                    </p>
+                  </td>
+                  <td>2016</td>
+                </tr>
+              </table>
 
-          <h5>Professional Skills</h5>
-            <ul>
-              <li>Backend</li>
-              <li>Frontend</li>
-              <li>DB Management</li>
-              <li>Teamwork</li>
-              <li>DevOps</li>
-            </ul>
-          <h5>Education</h5>
-            <table>
-              <tr>
-                <td>
-                  <p>BS Computer Science @ St. John's University, New York</p>
-                  <p>
-                    Ei inermis graecis phaedrum mea. 
-                    Saperet persequeris pro te. In eam liber audire, ut natum salutandi 
-                    consulatu nam.
-                  </p>
-                </td>
-                <td>2017</td>
-              </tr>
-              <tr>
-                <td>
-                  <p>High School Degree @ Caravel Academy, Delaware</p>
-                  <p>
-                    Ei inermis graecis phaedrum mea. 
-                    Saperet persequeris pro te. In eam liber audire, ut natum salutandi 
-                    consulatu nam.
-                  </p>
-                </td>
-                <td>2013</td>
-              </tr>
-            </table>
+            <h5>Professional Skills</h5>
+              <ul>
+                <Circle
+                  className="circle"
+                  percent="90"
+                  strokeWidth="3"
+                  trailWidth="3"
+                  strokeLinecap="square"
+                  strokeColor="cornflowerblue">
+                </Circle>
+                <li className="skill">Backend</li>
+
+                <Circle
+                  className="circle"
+                  percent="80"
+                  strokeWidth="3"
+                  trailWidth="3"
+                  strokeLinecap="square"
+                  strokeColor="cornflowerblue">
+                </Circle>
+                <li className="skill">Frontend</li>
+
+                <Circle
+                  className="circle"
+                  percent="65"
+                  strokeWidth="3"
+                  trailWidth="3"
+                  strokeLinecap="square"
+                  strokeColor="cornflowerblue">
+                </Circle>
+                <li className="skill">RDBMS</li>
+
+                <Circle
+                  className="circle"
+                  percent="90"
+                  strokeWidth="3"
+                  trailWidth="3"
+                  strokeLinecap="square"
+                  strokeColor="cornflowerblue">
+                </Circle>
+                <li className="skill">Teamwork</li>
+
+                <Circle
+                  className="circle"
+                  percent="100"
+                  strokeWidth="3"
+                  trailWidth="3"
+                  strokeLinecap="square"
+                  strokeColor="cornflowerblue">
+                </Circle>
+                <li className="skill">Barista-ing</li>
+              </ul>
+            <h5>Education</h5>
+              <table>
+                <tr>
+                  <td>
+                    <p>BS Computer Science @ St. John's University, New York</p>
+                    <p>
+                      Ei inermis graecis phaedrum mea. 
+                      Saperet persequeris pro te. In eam liber audire, ut natum salutandi 
+                      consulatu nam.
+                    </p>
+                  </td>
+                  <td>2017</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>High School Degree @ Caravel Academy, Delaware</p>
+                    <p>
+                      Ei inermis graecis phaedrum mea. 
+                      Saperet persequeris pro te. In eam liber audire, ut natum salutandi 
+                      consulatu nam.
+                    </p>
+                  </td>
+                  <td>2013</td>
+                </tr>
+              </table>
+            </div>
           </section>
         </div>
+      </div>
 
+      <div className="alt-row group">
         <section className="social-media">
           <ul>
             <li>
-              <a href="https://www.facebook.com/chris.harris.188">#</a>
+              <a href="https://www.linkedin.com/in/christopher-harris-69a442113/" className="fa fa-linkedin"></a>               
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/christopher-harris-69a442113/">#</a>
-            </li>
-            <li>
-              <a href="https://github.com/ChangingtheSpectrum">#</a>
+              <a href="https://github.com/ChangingtheSpectrum" className="fa fa-github"></a>            
             </li>
           </ul>
         </section>
+      </div>
 
+      <div className="row">
         <footer className="foot bar container">
           <p>
             219 W 145th St, New York, NY 10039 : Call (302)-670-3792 : 
@@ -191,6 +264,7 @@ class App extends Component {
           </p>
         </footer>
       </div>
+    </div>
     );
   }
 }
