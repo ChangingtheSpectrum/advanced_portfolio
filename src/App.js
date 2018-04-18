@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Line, Circle } from 'rc-progress';
-import logo from './logo.svg';
+import selfie from './bergtram-5.png';
 import './index.css';
+
+const image = {
+  src: selfie,
+  alt: 'Pic of me',
+};
 
 class App extends Component {
   render() {
@@ -22,7 +27,10 @@ class App extends Component {
         <section className="basic-info bar container">
           <h2>Chris Harris</h2>
           <p>Fullstack Developer</p>
-          <img src="asdf" className="selfie" alt="A pic of me"/>
+          <img 
+            className="selfie"
+            src={image.src} 
+            alt={image.alt} />
         </section>
       </div>
 
@@ -75,8 +83,9 @@ class App extends Component {
                   <td>
                     <Line className="line"
                       percent="80" 
-                      strokeWidth="3"
-                      trailWidth="3"
+                      strokeWidth="5"
+                      trailWidth="5"
+                      strokeLinecap="square"
                       strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
@@ -85,8 +94,9 @@ class App extends Component {
                   <td>
                     <Line className="line"
                       percent="75" 
-                      strokeWidth="3"
-                      trailWidth="3"
+                      strokeWidth="5"
+                      trailWidth="5"
+                      strokeLinecap="square"
                       strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
@@ -95,8 +105,9 @@ class App extends Component {
                   <td>
                     <Line className="line"
                       percent="70" 
-                      strokeWidth="3"
-                      trailWidth="3"
+                      strokeWidth="5"
+                      trailWidth="5"
+                      strokeLinecap="square"
                       strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
@@ -105,8 +116,9 @@ class App extends Component {
                   <td>
                     <Line className="line"
                       percent="90" 
-                      strokeWidth="3"
-                      trailWidth="3"
+                      strokeWidth="5"
+                      trailWidth="5"
+                      strokeLinecap="square"
                       strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
@@ -115,19 +127,40 @@ class App extends Component {
                   <td>
                     <Line className="line" 
                       percent="60" 
-                      strokeWidth="3"
-                      trailWidth="3"
+                      strokeWidth="5"
+                      trailWidth="5"
+                      strokeLinecap="square"
                       strokeColor="cornflowerblue"/>
                   </td>
                 </tr>
               </table>
 
             <h5>Hobbies</h5>
-              <ul>
-                <li>Music</li>
-                <li>Gaming</li>
-                <li>Coding</li>
-                <li>General Tinkering</li>
+              <ul className="hobby-list">
+                <li>
+                  <i className="material-icons">headset</i>
+                  <span>Music</span>
+                </li>
+                <li>
+                  <i className="material-icons">gamepad</i>
+                  <span>Gaming</span>
+                </li>
+                <li>
+                  <i className="material-icons">code</i>
+                  <span>Coding</span>
+                </li>
+                <li>
+                  <i className="material-icons">directions_bike</i>
+                  <span>Biking</span>
+                </li>
+                <li>
+                  <i className="material-icons">fitness_center</i>
+                  <span>Lifting</span>
+                </li>
+                <li>
+                  <i className="material-icons">build</i>
+                  <span>Tinkering</span>
+                </li>
               </ul>
 
 
@@ -166,8 +199,8 @@ class App extends Component {
                 <Circle
                   className="circle"
                   percent="90"
-                  strokeWidth="3"
-                  trailWidth="3"
+                  strokeWidth="5"
+                  trailWidth="5"
                   strokeLinecap="square"
                   strokeColor="cornflowerblue">
                 </Circle>
@@ -176,8 +209,8 @@ class App extends Component {
                 <Circle
                   className="circle"
                   percent="80"
-                  strokeWidth="3"
-                  trailWidth="3"
+                  strokeWidth="5"
+                  trailWidth="5"
                   strokeLinecap="square"
                   strokeColor="cornflowerblue">
                 </Circle>
@@ -186,8 +219,8 @@ class App extends Component {
                 <Circle
                   className="circle"
                   percent="65"
-                  strokeWidth="3"
-                  trailWidth="3"
+                  strokeWidth="5"
+                  trailWidth="5"
                   strokeLinecap="square"
                   strokeColor="cornflowerblue">
                 </Circle>
@@ -196,8 +229,8 @@ class App extends Component {
                 <Circle
                   className="circle"
                   percent="90"
-                  strokeWidth="3"
-                  trailWidth="3"
+                  strokeWidth="5"
+                  trailWidth="5"
                   strokeLinecap="square"
                   strokeColor="cornflowerblue">
                 </Circle>
@@ -206,8 +239,8 @@ class App extends Component {
                 <Circle
                   className="circle"
                   percent="100"
-                  strokeWidth="3"
-                  trailWidth="3"
+                  strokeWidth="5"
+                  trailWidth="5"
                   strokeLinecap="square"
                   strokeColor="cornflowerblue">
                 </Circle>
@@ -247,10 +280,10 @@ class App extends Component {
         <section className="social-media">
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/christopher-harris-69a442113/" className="fa fa-linkedin"></a>               
+              <a href="https://www.linkedin.com/in/christopher-harris-69a442113/" className="fa fa-linkedin" />              
             </li>
             <li>
-              <a href="https://github.com/ChangingtheSpectrum" className="fa fa-github"></a>            
+              <a href="https://github.com/ChangingtheSpectrum" className="fa fa-github" />            
             </li>
           </ul>
         </section>
