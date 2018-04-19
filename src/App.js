@@ -18,18 +18,18 @@ class App extends Component {
           <header className="head container">
             <ul className="navbar">
               <button
-                onClick={ () => scrollToComponent(this.App, { 
-                  offset: -1000, 
-                  align :'middle', 
-                  duration: 500, 
+                onClick={ () => scrollToComponent(this.App, {
+                  offset: -1000,
+                  align :'middle',
+                  duration: 2000,
                   ease:'outCirc'})}>
                     Hello
               </button>
-              <button 
-                onClick={ () => scrollToComponent(this.grid, { 
-                  offset: 450, 
-                  align :'middle', 
-                  duration: 500, 
+              <button
+                onClick={ () => scrollToComponent(this.grid, {
+                  offset: 450,
+                  align :'middle',
+                  duration: 500,
                   ease:'outCirc'})}>
                     Resume
               </button>
@@ -52,8 +52,8 @@ class App extends Component {
       <div className="bio-row">
         <section className="bio bar container">
           <p>
-            Hey there! My name's Chris -- I'm a recent Computer Science graduate 
-            from St. John's University in Queens, NY. I have plenty of experience 
+            Hey there! My name's Chris -- I'm a recent Computer Science graduate
+            from St. John's University in Queens, NY. I have plenty of experience
             in developing from database to frontend (check out my GitHub!), garnered through many a YouTube
             tutorial and trial and error. I look forward to hearing from you!
           </p>
@@ -61,7 +61,7 @@ class App extends Component {
       </div>
 
       <div className="content">
-        <div 
+        <div
           className="grid"
           ref={(section) => { this.grid = section; }}>
           <section className="col-1-3">
@@ -234,10 +234,10 @@ class App extends Component {
                       <p>IT Technician @ The Institute for Family Health</p>
                       <ul className="responsibilities">
                         <li>
-                          Communicated with clients, employees, 
+                          Communicated with clients, employees,
                           and patients alike to identify and resolve technical issues
                         </li>
-                        <li> 
+                        <li>
                           Ran diagnostics on a wide range of devices
                         </li>
                         <li>
@@ -252,10 +252,10 @@ class App extends Component {
                       <p>Software Engineering Internship @ Citymaps</p>
                         <ul className="responsibilities">
                           <li>
-                            Debugged and refactored Java and Scala 
+                            Debugged and refactored Java and Scala
                             based code as part of a small team
                           </li>
-                          <li> 
+                          <li>
                             Optimized the asynchronous nature of continuously updating maps
                           </li>
                           <li>

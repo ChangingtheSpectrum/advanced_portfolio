@@ -52,6 +52,9 @@ body {
   cursor: pointer;
   border-bottom: 2px solid white;
 }
+.navbar button:focus {
+  outline: none;
+}
 
 li {
   display: inline-block;
