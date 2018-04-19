@@ -79,7 +79,44 @@ class App extends Component {
               </table>
 
             <h5>Languages</h5>
-              <table>
+              <ul className="languages">
+                <li>HTML5</li>
+                  <Line className="line"
+                    percent="80"
+                    strokeWidth="3"
+                    trailWidth="3"
+                    strokeLinecap="square"
+                    strokeColor="cornflowerblue"/>
+                <li>CSS</li>
+                  <Line className="line"
+                    percent="75"
+                    strokeWidth="3"
+                    trailWidth="3"
+                    strokeLinecap="square"
+                    strokeColor="cornflowerblue"/>
+                <li>JavaScript</li>
+                  <Line className="line"
+                    percent="70"
+                    strokeWidth="3"
+                    trailWidth="3"
+                    strokeLinecap="square"
+                    strokeColor="cornflowerblue"/>
+                <li>Python</li>
+                  <Line className="line"
+                    percent="90"
+                    strokeWidth="3"
+                    trailWidth="3"
+                    strokeLinecap="square"
+                    strokeColor="cornflowerblue"/>
+                <li>SQL</li>
+                  <Line className="line"
+                    percent="60"
+                    strokeWidth="3"
+                    trailWidth="3"
+                    strokeLinecap="square"
+                    strokeColor="cornflowerblue"/>
+              </ul>
+              {/*<table>
                 <tbody>
                   <tr>
                     <td>HTML5</td>
@@ -137,7 +174,7 @@ class App extends Component {
                     </td>
                   </tr>
                 </tbody>
-              </table>
+              </table>*/}
 
             <h5>Hobbies</h5>
               <ul className="hobby-list">
