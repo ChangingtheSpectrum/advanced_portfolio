@@ -7,6 +7,7 @@
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-scripts": "1.1.4",
+    "react-scroll-to-component": "^1.0.2",
     "set-default-browser": "^1.0.1"
   },
   "scripts": {

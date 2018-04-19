@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Line, Circle } from 'rc-progress';
+import scrollToComponent from 'react-scroll-to-component';
 import selfie from './Chiggin.jpeg';
 import './index.css';
 
@@ -11,19 +12,33 @@ const image = {
 class App extends Component {
   render() {
     return (
-      <div className="App">
-
-        <div className="row">
+      <div className="App"
+        ref={(section) => { this.App = section; }}>
+        <div className="row nav">
           <header className="head container">
             <ul className="navbar">
-              <li>Hello</li>
-              <li>Resume</li>
-              <li>Portfolio</li>
+              <button
+                onClick={ () => scrollToComponent(this.App, { 
+                  offset: -1000, 
+                  align :'middle', 
+                  duration: 500, 
+                  ease:'outCirc'})}>
+                    Hello
+              </button>
+              <button 
+                onClick={ () => scrollToComponent(this.grid, { 
+                  offset: 450, 
+                  align :'middle', 
+                  duration: 500, 
+                  ease:'outCirc'})}>
+                    Resume
+              </button>
+              <button>Portfolio</button>
             </ul>
           </header>
         </div>
 
-      <div className="alt-row">
+      <div className="alt-row first-alt">
         <section className="basic-info bar container">
           <h2>Chris Harris</h2>
           <p>Fullstack Developer</p>
@@ -37,16 +52,18 @@ class App extends Component {
       <div className="bio-row">
         <section className="bio bar container">
           <p>
-            Lorem ipsum dolor sit amet, sed ne mundi dicam mandamus. Vel an regione salutatus,
-            nam ut accusata mediocritatem, an vis adhuc mazim incorrupte. Mea id tractatos
-            posidonium, ad nam putent utroque. Ei inermis graecis phaedrum mea.
-            Saperet persequeris pro te. In eam liber audire, ut natum salutandi consulatu nam.
+            Hey there! My name's Chris -- I'm a recent Computer Science graduate 
+            from St. John's University in Queens, NY. I have plenty of experience 
+            in developing from database to frontend (check out my GitHub!), garnered through many a YouTube
+            tutorial and trial and error. I look forward to hearing from you!
           </p>
         </section>
       </div>
 
       <div className="content">
-        <div className="grid">
+        <div 
+          className="grid"
+          ref={(section) => { this.grid = section; }}>
           <section className="col-1-3">
             <h5>Personal</h5>
               <table>
@@ -215,22 +232,36 @@ class App extends Component {
                   <tr>
                     <td>
                       <p>IT Technician @ The Institute for Family Health</p>
-                      <p>
-                        Ei inermis graecis phaedrum mea.
-                        Saperet persequeris pro te. In eam liber audire, ut natum salutandi
-                        consulatu nam.
-                      </p>
+                      <ul className="responsibilities">
+                        <li>
+                          Communicated with clients, employees, 
+                          and patients alike to identify and resolve technical issues
+                        </li>
+                        <li> 
+                          Ran diagnostics on a wide range of devices
+                        </li>
+                        <li>
+                          Configured networks of multiple different sites
+                        </li>
+                      </ul>
                     </td>
                     <td>2018</td>
                   </tr>
                   <tr>
                     <td>
                       <p>Software Engineering Internship @ Citymaps</p>
-                      <p>
-                        Ei inermis graecis phaedrum mea.
-                        Saperet persequeris pro te. In eam liber audire, ut natum salutandi
-                        consulatu nam.
-                      </p>
+                        <ul className="responsibilities">
+                          <li>
+                            Debugged and refactored Java and Scala 
+                            based code as part of a small team
+                          </li>
+                          <li> 
+                            Optimized the asynchronous nature of continuously updating maps
+                          </li>
+                          <li>
+                            Worked with team using git and GitHub, made numerous pull requests
+                          </li>
+                        </ul>
                     </td>
                     <td>2016</td>
                   </tr>
@@ -290,29 +321,19 @@ class App extends Component {
                 <li className="skill">Barista-ing</li>
               </ul>
             <h5>Education</h5>
-              <table>
+              <table className="education">
                 <tbody>
                   <tr>
                     <td>
                       <p>BS Computer Science @ St. John's University, New York</p>
-                      <p>
-                        Ei inermis graecis phaedrum mea.
-                        Saperet persequeris pro te. In eam liber audire, ut natum salutandi
-                        consulatu nam.
-                      </p>
                     </td>
-                    <td>2017</td>
+                    <td className="date">2017</td>
                   </tr>
                   <tr>
                     <td>
                       <p>High School Degree @ Caravel Academy, Delaware</p>
-                      <p>
-                        Ei inermis graecis phaedrum mea.
-                        Saperet persequeris pro te. In eam liber audire, ut natum salutandi
-                        consulatu nam.
-                      </p>
                     </td>
-                    <td>2013</td>
+                    <td className="date">2013</td>
                   </tr>
                 </tbody>
               </table>
